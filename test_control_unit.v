@@ -15,7 +15,7 @@ module control_test;
 
 	// Inputs
 	reg [5:0] opCode;
-	reg [8:0] functCode;
+	reg [7:0] functCode;
 
 	// Outputs
 	wire CondBr;

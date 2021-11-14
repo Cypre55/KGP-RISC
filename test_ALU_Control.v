@@ -16,15 +16,17 @@ module test_ALU_Control;
 	// Inputs
 	reg [2:0] ALUOp;
 	reg [7:0] func_code;
-
+	
 	// Outputs
 	wire [2:0] op;
+	wire shift_src;
 
 	// Instantiate the Unit Under Test (UUT)
 	ALU_Control uut (
 		.op(op), 
 		.ALUOp(ALUOp), 
-		.func_code(func_code)
+		.func_code(func_code),
+		.shift_src(shift_src)
 	);
 
 	initial begin

@@ -15,26 +15,11 @@ module test_CPU;
 	// Inputs
 	reg clk;
 	reg rst;
-	wire ALU_Zero;
-	wire [31:0] reg1;
-	wire [31:0] reg0, reg10, reg11, reg14, reg31, inst, OLD_PC, ALU_Result, ALU_In_A, ALU_In_B;
 
 	// Instantiate the Unit Under Test (UUT)
 	CPU uut (
 		.clk(clk),
-		.rst(rst),
-		.reg0(reg0),
-		.reg1(reg1),
-		.reg10(reg10),
-		.reg11(reg11),
-		.reg14(reg14),
-		.reg31(reg31),
-		.OLD_PC(OLD_PC),
-		.ALU_In_B(ALU_In_B),
-		.ALU_In_A(ALU_In_A),
-		.ALU_Zero(ALU_Zero),
-		.ALU_Result(ALU_Result),
-		.inst(inst)
+		.rst(rst)
 	);
 
 	initial begin

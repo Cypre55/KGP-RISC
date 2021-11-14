@@ -9,12 +9,9 @@
 // 
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module CPU(reg0, reg1, reg10, reg11, ALU_In_A, ALU_In_B, ALU_Zero, ALU_Result, reg14, reg31, OLD_PC, inst, clk, rst);
+module CPU(clk, rst);
 
 input clk, rst;
-output [31:0] reg0, reg1, reg10, reg11, reg14, reg31;
-output [31:0] inst, OLD_PC, ALU_Result, ALU_In_A, ALU_In_B;
-output ALU_Zero;
 
 
 wire CondBr, RegBr, UncondBr,  ALUSrc, RegDst,ShiftSrc;
@@ -22,8 +19,8 @@ wire WriteReg, ALU_Neg, ALU_Zero, ALU_Carry, MemRead, MemWrite;
 wire [1:0] WriteSrc, UncondControl, CondControl;
 wire [2:0] ALUOp, ALU_C_Out;
 wire [4:0] WriteReg_In;
-wire [31:0] ALU_In_A, OLD_PC, ALU_Result, PC_In;
-wire [31:0] SignExtend_Out, PC_Out, Add4_Out, WriteData_In, ReadData_1, ReadData_2, ALU_In_B, DataMemory_Out;
+wire [31:0] inst, ALU_In_A, ALU_In_B, OLD_PC, ALU_Result, PC_In;
+wire [31:0] SignExtend_Out, PC_Out, Add4_Out, WriteData_In, ReadData_1, ReadData_2, DataMemory_Out;
 
 
 control_unit Control_Unit(CondBr,
@@ -99,13 +96,7 @@ register_file RegisterFile (
 	.read_data2(ReadData_2), 
 	.write(WriteReg), 
 	.clk(clk),
-	.rst(rst),
-	.reg0(reg0),
-	.reg1(reg1),
-	.reg10(reg10),
-	.reg11(reg11),
-	.reg14(reg14),
-	.reg31(reg31)
+	.rst(rst)
 );
 
 sign_extend Sign_Extend (

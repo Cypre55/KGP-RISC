@@ -18,6 +18,7 @@ module test_ALU;
 	reg [31:0] b;
 	reg [4:0] sh_amt;
 	reg [2:0] op;
+	reg shift_src, clk;
 
 	// Outputs
 	wire [31:0] result;
@@ -28,12 +29,14 @@ module test_ALU;
 	// Instantiate the Unit Under Test (UUT)
 	ALU uut (
 		.result(result), 
-		.neg(neg), 
-		.zero(zero), 
-		.carry(carry), 
+		.neg_out(neg), 
+		.zero_out(zero), 
+		.carry_out(carry), 
 		.a(a), 
 		.b(b), 
-		.sh_amt(sh_amt), 
+		.sh_amt(sh_amt),
+		.shift_src(shift_src),
+		.clk(clk),
 		.op(op)
 	);
 
@@ -43,6 +46,7 @@ module test_ALU;
 		b = 54;
 		sh_amt = 5;
 		op = 0;
+		shift_src = 1;
 
 		// Wait 100 ns for global reset to finish
 		#100;
@@ -75,6 +79,8 @@ module test_ALU;
 		// Add stimulus here
 
 	end
+	
+	always #10 clk = ~clk;
       
 endmodule
 

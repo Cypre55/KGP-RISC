@@ -19,14 +19,15 @@ module pc_test;
 	reg rst;
 
 	// Outputs
-	wire [31:0] out, finout;
+	wire [31:0] out, finout, old_val;
 
 	// Instantiate the Unit Under Test (UUT)
 	pc uut (
 		.inp(finout), 
 		.out(out), 
 		.clk(clk), 
-		.rst(rst)
+		.rst(rst),
+		.old_val(old_val)
 	);
 	
 	add4 ad(.inp(out), .out(finout));

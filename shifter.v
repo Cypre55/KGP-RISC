@@ -23,8 +23,6 @@ always @ (op or a or sh_amt) begin
 		sh_result <= a >> sh_amt;
 	end else if (op == 3'b101) begin
 		sh_result <= a >>> sh_amt;
-		$display("Right Shift Artihmatic");
-
 	end
 end
 

@@ -9,13 +9,11 @@
 // 
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module register_file(read_reg1, read_reg2, write_reg, write_data, read_data1, read_data2, write, clk, rst, 
-reg0, reg1, reg10, reg11, reg14, reg31);
+module register_file(read_reg1, read_reg2, write_reg, write_data, read_data1, read_data2, write, clk, rst);
 input [4:0] read_reg1, read_reg2, write_reg;
 input [31:0] write_data;
 input write, clk, rst;
 output reg [31:0]read_data1, read_data2;
-output [31:0] reg0, reg1, reg10, reg11, reg14, reg31;
 
 reg [31:0] registers[31:0];
 
@@ -65,12 +63,5 @@ begin
 	read_data1=registers[read_reg1];
 	read_data2=registers[read_reg2];
 end
-
-assign reg0 = registers[0];
-assign reg1 = registers[1];
-assign reg10 = registers[10];
-assign reg11 = registers[11];
-assign reg14 = registers[14];
-assign reg31 = registers[31];
 
 endmodule
