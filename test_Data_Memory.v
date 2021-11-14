@@ -1,26 +1,17 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
+//////////////////////////////////////////////////////////////////////////////////
+// Assignment 7
 //
-// Create Date:   18:56:18 11/11/2021
-// Design Name:   Data_Memory
-// Module Name:   /home/chaoticsaint/Desktop/Academics/5th Semester/COA Lab/Project/Verilog/test_DataMemory.v
-// Project Name:  Verilog
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: Data_Memory
-//
-// Dependencies:
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
+// This is the testbench for the Data Memory
 // 
-////////////////////////////////////////////////////////////////////////////////
+// Ensure Data_Memory initiated and loaded correctly
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module test_DataMemory;
 

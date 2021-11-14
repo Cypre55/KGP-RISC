@@ -6,7 +6,10 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// This Module is the main CPU.
+// All the submodules are connected according to the Chip Design in the report
+// Makes sure the Data Memory and Instruction Memory are initilized before running
+// test_CPU.v
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module CPU(clk, rst);

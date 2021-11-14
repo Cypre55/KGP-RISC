@@ -6,7 +6,12 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// This module is the Arithmatic Logic Unit
+// It performs Addtion, Complementation, Shift Left Logical, Shift Right Logical
+// Shift Right Arithmatic, AND and XOR
+// It also computes if the ALU result is negative or zero
+// It also stores the carry from previous computation. This is done synchronously
+// on the negedge of the clock.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module ALU(result, neg_out, zero_out, carry_out, a, b, sh_amt, op, shift_src, clk);

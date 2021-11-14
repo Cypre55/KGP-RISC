@@ -7,7 +7,10 @@
 #//Members: 	Seemant Guruprasad Achari 	19CS10055
 #//			    Chappidi Yoga Satwik 		19CS30013
 #// 
-#// 
+#// This is a simple assembler.
+#// It performs two rounds of parsing. 
+#// First for the Labels, then the individual instructions.
+#// It encodes them into binary and produces a COE file.
 #// 
 #//////////////////////////////////////////////////////////////////////////////////
 import sys

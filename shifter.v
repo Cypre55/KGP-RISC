@@ -6,7 +6,10 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
+// This module performs Shift Left Logical, Shift Right Logical
+// Shift Right Arithmatic.
 // 
+// It is a submodule of the ALU.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module shifter(sh_result, op, a, sh_amt);
