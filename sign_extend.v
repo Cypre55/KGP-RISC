@@ -6,7 +6,7 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// This module sign extends 16-bit immediates into 32-bit signed numbers
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module sign_extend(out, in);

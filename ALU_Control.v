@@ -6,7 +6,8 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// This module receives the ALUOp from the Control Unit and the Function Code from the
+// instruction. It produces the Operation the ALU has to perform as well as the ShiftSrc
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module ALU_Control(op, shift_src, ALUOp, func_code);

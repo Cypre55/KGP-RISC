@@ -7,7 +7,9 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
+// This is the testbench for the Instruction Memory
 // 
+// Ensure Instruction_Memory are initiated and loaded correctly
 // 
 //////////////////////////////////////////////////////////////////////////////////
 

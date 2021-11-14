@@ -6,7 +6,15 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
+// This module is a part of the ALU. An array of 32 1-bit ALUs is one of the major 
+// part of the ALU.
 // 
+// The 1-bit ALU handles complemtation, addition, AND and XOR of 1 bit.
+// 
+// It pass the result from the shifter if the "op" corresponds to shifting
+// 
+// If negative or zero need to be found, "a" is just passed through. In the ALU, there
+// are parts that check negative and zero
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module One_Bit_ALU(result, c_out_add, c_out_comp, a, b, sh_result, c_in_add, c_in_comp, op);

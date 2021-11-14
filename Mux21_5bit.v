@@ -6,7 +6,7 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// This module is a 2x1 Multiplexer with inputs and output being 5 bit wide.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module Mux21_5bit(out, in0, in1, sel);

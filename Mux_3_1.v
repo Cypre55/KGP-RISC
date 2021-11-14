@@ -6,7 +6,7 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// This module is a 3x1 Multiplexer with inputs and output being 32 bit wide.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module Mux_3_1(out, in00, in01, in10, sel);
