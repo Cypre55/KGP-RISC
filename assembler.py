@@ -5,7 +5,7 @@
 #//
 #//Group No.42
 #//Members: 	Seemant Guruprasad Achari 	19CS10055
-#//			Chappidi Yoga Satwik 		19CS30013
+#//			    Chappidi Yoga Satwik 		19CS30013
 #// 
 #// 
 #// 
