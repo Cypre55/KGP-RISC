@@ -60,9 +60,6 @@ module test_CPU;
 		#10;
 		rst = 0;
 
-		#3000;
-		$finish;
-
 	end
 	
 	

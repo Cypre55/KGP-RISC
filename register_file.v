@@ -28,7 +28,7 @@ output [31:0] reg0, reg1, reg10, reg11, reg14, reg31;
 
 reg [31:0] registers[31:0];
 
-always@(rst) begin
+always@(posedge clk) begin
 if(rst) 
 	begin
 		registers[0]=32'b0;
@@ -65,17 +65,14 @@ if(rst)
 		registers[30]=32'b0;
 		registers[31]=32'b0;
 	end
+	if(!rst && write)
+	registers[write_reg]=write_data;
 end
 
 always@(registers[read_reg1] or registers[read_reg2])
 begin
 	read_data1=registers[read_reg1];
 	read_data2=registers[read_reg2];
-end
-
-always@(posedge clk) begin
-	if(!rst && write)
-	registers[write_reg]=write_data;
 end
 
 assign reg0 = registers[0];

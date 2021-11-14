@@ -26,17 +26,13 @@ output [31:0] old_val;
 
 reg [31:0] program_counter;
 
-always@(rst) begin
-if(rst) 
+always@(negedge clk) begin
+	if(rst) 
 	begin
-		out=0;
-		program_counter=0;
+		out<=0;
+		// program_counter<=0;
 	end
-end
-
-always@(negedge clk)
-begin
-	if (inp !== 32'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) begin
+	if (!rst && inp !== 32'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) begin
 	// program_counter<=inp;
 	out<=inp;
 	end
@@ -44,6 +40,11 @@ end
 
 always@(posedge clk)
 begin
+	if(rst) 
+	begin
+		// out<=0;
+		program_counter<=0;
+	end
 	if (!rst && inp !== 32'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) begin
 	program_counter<=inp;
 	// out<=inp;
