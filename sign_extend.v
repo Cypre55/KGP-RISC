@@ -1,22 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Assignment 7
+//
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Create Date:    12:11:44 11/11/2021 
-// Design Name: 
-// Module Name:    sign_extend 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
+// 
+// 
 //////////////////////////////////////////////////////////////////////////////////
 module sign_extend(out, in);
 

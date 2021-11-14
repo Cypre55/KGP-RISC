@@ -1,22 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Assignment 7
+//
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Create Date:    21:15:25 11/09/2021 
-// Design Name: 
-// Module Name:    CPU 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
+// 
+// 
 //////////////////////////////////////////////////////////////////////////////////
 module CPU(reg0, reg1, reg10, reg11, ALU_In_A, ALU_In_B, ALU_Zero, ALU_Result, reg14, reg31, OLD_PC, inst, clk, rst);
 

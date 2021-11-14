@@ -1,22 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Assignment 7
+//
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Create Date:    17:38:39 11/09/2021 
-// Design Name: 
-// Module Name:    register_file 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
+// 
+// 
 //////////////////////////////////////////////////////////////////////////////////
 module register_file(read_reg1, read_reg2, write_reg, write_data, read_data1, read_data2, write, clk, rst, 
 reg0, reg1, reg10, reg11, reg14, reg31);

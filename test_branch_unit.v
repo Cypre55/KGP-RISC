@@ -1,26 +1,15 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
+//////////////////////////////////////////////////////////////////////////////////
+// Assignment 7
 //
-// Create Date:   21:25:42 11/08/2021
-// Design Name:   branch_mechanism
-// Module Name:   /home/seemant/Assignment_7/branch_test.v
-// Project Name:  Assignment_7
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: branch_mechanism
-//
-// Dependencies:
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
 // 
-////////////////////////////////////////////////////////////////////////////////
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module branch_test;
 

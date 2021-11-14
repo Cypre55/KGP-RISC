@@ -1,26 +1,15 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
+//////////////////////////////////////////////////////////////////////////////////
+// Assignment 7
 //
-// Create Date:   12:24:50 11/11/2021
-// Design Name:   Mux_3_1
-// Module Name:   /home/chaoticsaint/Desktop/Academics/5th Semester/COA Lab/Project/Verilog/test_mux_3_1.v
-// Project Name:  Verilog
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: Mux_3_1
-//
-// Dependencies:
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
 // 
-////////////////////////////////////////////////////////////////////////////////
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module test_mux_3_1;
 

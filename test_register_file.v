@@ -1,26 +1,15 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
+//////////////////////////////////////////////////////////////////////////////////
+// Assignment 7
 //
-// Create Date:   18:04:18 11/09/2021
-// Design Name:   register_file
-// Module Name:   /home/seemant/Assignment_7/registers_test.v
-// Project Name:  Assignment_7
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: register_file
-//
-// Dependencies:
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
 // 
-////////////////////////////////////////////////////////////////////////////////
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
 module registers_test;
 

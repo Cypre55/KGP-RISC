@@ -1,22 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Assignment 7
+//
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Create Date:    23:29:06 11/11/2021 
-// Design Name: 
-// Module Name:    Mux21_5bit 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
+// 
+// 
 //////////////////////////////////////////////////////////////////////////////////
 module Mux21_5bit(out, in0, in1, sel);
 

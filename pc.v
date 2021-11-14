@@ -1,22 +1,13 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Assignment 7
+//
+//Group No.42
+//Members: 	Seemant Guruprasad Achari 	19CS10055
+//			Chappidi Yoga Satwik 		19CS30013
 // 
-// Create Date:    18:38:14 11/09/2021 
-// Design Name: 
-// Module Name:    pc 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
+// 
+// 
 //////////////////////////////////////////////////////////////////////////////////
 module pc(inp, out, clk, rst, old_val);
 input [31:0]inp;
