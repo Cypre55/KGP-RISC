@@ -6,7 +6,9 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// The following is the module to handle the input for the Program Counter in each cycle.
+// It recieves as input the flags needed to decide whether to branch or not on a certain instruction
+// and controls from the Control unit to decide on which value to be output
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module branch_mechanism( zero, carry, negative, immediate, pseudo_add, 
@@ -29,17 +31,18 @@ multiplexer21 condMux(.a(condAdd),.b(pc),.select(condFinal),.out(condOut));
 multiplexer21 uncondMux(.a(uncondAdd),.b(condOut),.select(uncondFinal),.out(uncondOut));
 multiplexer21 regMux(.a(register),.b(uncondOut),.select(regBr),.out(out));
 
-always@(pc or immediate)
+always@(pc or immediate)								// calculating the address to be jumped to in case of conditional branch
 begin
 	condAdd=immediate;
 	condAdd=condAdd<<2;
 	condAdd=pc+condAdd;
 end
 
-always@(pseudo_add or pc) begin
+always@(pseudo_add or pc) begin							// calculating the address to be jumped to in case of unconditional branch
 	uncondAdd=pseudo_add;
 	uncondAdd=uncondAdd<<2;
-	uncondAdd[31]=pc[31];	uncondAdd[30]=pc[30];	uncondAdd[29]=pc[29];	uncondAdd[28]=pc[28];
+	uncondAdd[31]=pc[31];	uncondAdd[30]=pc[30];		//appending the last 4 bits of program counter
+	uncondAdd[29]=pc[29];	uncondAdd[28]=pc[28];
 end
 
 //select line for conditional branch mux

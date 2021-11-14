@@ -6,7 +6,8 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// The following module is to send out control signals to various multiplexers and 
+// other modules. It recieves as input the functCode and the opCode from the instruction
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module control_unit(CondBr,

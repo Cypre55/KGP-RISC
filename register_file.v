@@ -6,7 +6,8 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
+// The following module is the Register File which stores 32 registers and handles read and write into the registers
+// The read happens asynchronously whereas the write happens on the posedge of the clock
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module register_file(read_reg1, read_reg2, write_reg, write_data, read_data1, read_data2, write, clk, rst);

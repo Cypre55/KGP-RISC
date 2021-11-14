@@ -6,8 +6,9 @@
 //Members: 	Seemant Guruprasad Achari 	19CS10055
 //			Chappidi Yoga Satwik 		19CS30013
 // 
-// 
-// 
+// The program counter to store the address of the next address to read from the instruction memory
+// The output is updated on the negedge of the clock
+// The value to be output is first stored in the program_counter register which is updated on the posedge
 //////////////////////////////////////////////////////////////////////////////////
 module pc(inp, out, clk, rst, old_val);
 input [31:0]inp;
@@ -21,10 +22,8 @@ always@(negedge clk) begin
 	if(rst) 
 	begin
 		out<=0;
-		// program_counter<=0;
 	end
 	if (!rst && inp !== 32'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) begin
-	// program_counter<=inp;
 	out<=inp;
 	end
 end
@@ -33,12 +32,10 @@ always@(posedge clk)
 begin
 	if(rst) 
 	begin
-		// out<=0;
 		program_counter<=0;
 	end
 	if (!rst && inp !== 32'bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx) begin
 	program_counter<=inp;
-	// out<=inp;
 	end
 end
 

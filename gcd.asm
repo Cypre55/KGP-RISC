@@ -5,6 +5,11 @@
 # Members: 	Seemant Guruprasad Achari 	19CS10055
 #			Chappidi Yoga Satwik 		19CS30013
 
+
+
+# The following is the assembly code for a recursive gcd function to test the return mechanism,
+# the arithmetic operations, branching and read and write form the memory
+
 # C Program
 
 # gcd(int a, int b){
@@ -51,46 +56,46 @@
 
 
 .main
-xor   $0, $0
-xor   $1, $1
-addi    $0, 3
+xor   $0, $0            #setting $sp <- 0
+xor   $1, $1            #setting $rbp <- 0
+addi    $0, 3           #creating space for local variables
 
-xor   $10, $10
-lw    $10, 0($1)
+xor   $10, $10          
+lw    $10, 0($1)        #loading the arguments from memory
 
 xor   $11, $11
 lw    $11, 1($1)
 
-bl    gcd
+bl    gcd               #calling gcd
 
-b       end 
+b       end             #proceeding to set final answer
 
-.gcd
+.gcd                    #the gcd function
 
-addi  $0, 1
-sw    $31, -1($0)
+addi  $0, 1             #storing the return address to be restored later
+sw    $31, -1($0)       
 
-addi  $0, 1
+addi  $0, 1             #storing the base pointer to be restored later
 sw    $1, -1($0)
 
 
-xor $1, $1
+xor $1, $1              #updating the base pointer
 add $1, $0
 
 
 
-bz  $11, return_a
+bz  $11, return_a       #if b==0 then proceed to return a
 
-comp $2, $11
+comp $2, $11            #$2 <- (-b)
 
-xor $3, $3
-add $3, $10
-add  $3, $2
+xor $3, $3              #$3 <- 0
+add $3, $10             #$3 <- a
+add  $3, $2             #$3 <- a-b
 
-bltz $3, swap
-b    recur_call
+bltz $3, swap           # if a-b<0 then swap a and b
+b    recur_call         # making the recursive call
 
-.swap
+.swap                   # swapping $10 and $11
 xor $4, $4
 add $4, $10
 xor $10, $10
@@ -98,35 +103,32 @@ add $10, $11
 xor $11, $11
 add $11, $4
 
-.recur_call
-comp  $2, $11
+.recur_call             # gcd (a-b, b)
+comp  $2, $11           # setting $10 to be a-b
 add  $10, $2
 
-bl   gcd
+bl   gcd                #calling gcd again on a-b, b
 
-b return
+b return                # proceeding to return
 
 
-.return_a
-xor $14, $14
+.return_a               #return a
+xor $14, $14            # $14 <- a
 add $14, $10
 
-addi $1, 10
-addi $1, -10
-
-b return
+b return                #proceed to return
 
 
 
 .return
 
-lw $1, -1($0)
+lw $1, -1($0)           #restoring the value of $rbp
 addi $0, -1
 
-lw $31, -1($0)
+lw $31, -1($0)          #restoring the value of $31
 addi $0, -1
 
-br $31
+br $31                  # register jump to the return address of callee
 
 .end
-sw    $14, 2($1)
+sw    $14, 2($1)        # storing the final answer in memory location 3
